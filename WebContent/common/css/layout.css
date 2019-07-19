@@ -1,0 +1,52 @@
+@CHARSET "EUC-KR";
+
+body {
+	font-size: 9pt;
+	text-align: justify;
+}
+
+h1 {
+	color: #429094;
+}
+
+#h22 {
+	color: #429094;
+}
+
+h3 {
+	color: #ff4747;
+}
+
+#garden {
+	background-image: url("../../images/background.gif");
+	background-repeat: no-repeat;
+	background-color: #a7cece;
+	border: solid white 1px;
+	padding: 20px;
+	margin: 20px;
+	padding-left: 100px;
+	font-style: italic;
+	height: 80px;
+	font-style: italic;
+	overflow: auto; /* 수직이동줄(스크롤) 생김 */
+}
+
+#section1 {
+	width: 75%;
+	float: left;
+}
+
+#garden02 {
+	text-align: center;
+	border: solid #b1d8d8 2px;
+	padding: 10px;
+	width: 20%;
+	float: left;
+	margin-left: 10px;
+}
+
+#footer {
+	text-align: center;
+	font-size: 8pt;
+	clear: both;
+}

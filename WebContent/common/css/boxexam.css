@@ -1,0 +1,22 @@
+@CHARSET "EUC-KR";
+body{
+	font-size: 9pt;
+}
+h1{
+	color: #8abdc0;
+}
+#garden{
+	background-image: url("../../images/background.gif");
+	background-repeat: no-repeat;
+	background-color: #a7cece;
+	border: solid white 1px;
+	padding: 20px;
+	margin: 20px;
+	padding-left: 100px;
+	font-style: italic;
+	height: 80px;
+	left: 30px;
+	font-style: italic;
+	overflow: auto; /* 수직이동줄(스크롤) 생김 */
+}
+
