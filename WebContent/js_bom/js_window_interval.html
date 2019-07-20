@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="EUC-KR">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		function showTime(){
+			today = new Date();
+			timeVal = today.getHours() + "시 "
+			timeVal = timeVal + today.getMinutes() + "분 "
+			timeVal = timeVal + today.getSeconds() + "초 "
+			myform.time.value = timeVal;
+		}
+		function run(){
+			//2초가 흐른 후에 주소표시줄에 naver.com을 입력해서 이동해라 (한번만실행)
+			//window.setTimeout("location.href='http://www.naver.com'", 2000);
+			
+			//함수호출이 아니라서 함수명만 
+			//window.setTimeout(showTime, 2000);
+			
+			//window.setInterval
+			timeid = window.setInterval(showTime, 1000);
+		}
+		function stop(){
+			//window 생략가능, 작업 id에 해당하는 작업을 종료
+			clearInterval(timeid);
+		}
+		
+	</script>
+	
+</head>
+<body onload="showTime()"> 	<!-- 로딩이 되는 시점에 함수호출 -->
+	<form name="myform">
+		<input type="text" name="time">
+		<input type="button" value="시작" onclick="run()">
+		<input type="button" value="중지" onclick="stop()">
+	</form>
+</body>
+</html>

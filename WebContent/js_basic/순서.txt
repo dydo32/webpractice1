@@ -18,7 +18,3 @@ js_date_exam.html
 js_date_test02.html
 js_array_test01.html
 js_array_exam.html
-
-function_hoisting.html
-function_expression.html
-function_callback.html
