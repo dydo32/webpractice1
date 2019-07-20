@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="EUC-KR">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+	
+	</script>
+</head>
+<body>
+	<script type="text/javascript">
+	today = new Date();
+	day = today.getDay();
+	hour = today.getHours();
+	
+	document.write("<img src='../images/m_garden0"+(day+1)+".jpg'/>");
+		
+	if(hour<12){
+		document.bgColor="lime";
+	}else{
+		document.bgColor="red";
+	}
+	
+	</script>
+</body>
+</html>
