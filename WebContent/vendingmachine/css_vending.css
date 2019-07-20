@@ -1,0 +1,122 @@
+@CHARSET "EUC-KR";
+body{
+			background: #afbde1;
+		}
+		.container {
+			border: solid;
+			text-align: center;
+			background: #95acd8;
+			font-size: 20pt;
+		    color: #ffffff;
+		}
+		.list-group-item{
+			color: #95acd8;
+			text-align: center;
+			font-size: 20pt;
+		}
+		.itemcontainer{
+			margin: 10px;
+			border: solid;
+			background: #363439;
+			width: 60%;
+			float: left;
+		 }
+		 .calccontainer{
+			margin: 10px;
+			border: solid;
+			background: #363439;
+			width: 35%;
+			float: left;
+		 }
+		 #coin{
+			margin: 5px;
+			margin-right: 10px;
+			border: solid #ffffff;
+			background: #8b898a;
+			color: #363439;
+			text-align: right;
+			width: 60%;
+			height: 50px;
+			float: left;
+		 }
+		 #totalcoin{
+		 	margin: 5px;
+			margin-right: 10px;
+			border: solid #ffffff;
+			background: #8b898a;
+			color: #363439;
+			text-align: right;
+			width: 95%;
+			height: 50px;
+			float: left;
+		 }
+		 #inputbtn{
+		 	margin: 5px;
+		 	border: solid #ffffff;
+			background: #8b898a;
+			width: 30%;
+			height: 85px;
+		 	font-size: 50pt;
+		 	float: left;
+		}
+		#select{
+			margin: 5px;
+			border: solid #ffffff;
+			background: #8b898a;
+			color: #363439;
+			font-size: 15pt;
+			text-align: left;
+			width: 95%;
+			height: 200px;
+			overflow: auto;
+			float: left;
+		}
+		#coinoutput{
+			margin: 5px;
+			margin-right: 10px;
+			border: solid #ffffff;
+			background: #8b898a;
+			color: #363439;
+			text-align: right;
+			width: 30%;
+			height: 100px;
+			float: left;
+		}
+		#output{
+			margin: 5px;
+			margin-right: 10px;
+			border: solid #ffffff;
+			background: #8b898a;
+			color: #363439;
+			text-align: right;
+			width: 60%;
+			height: 200px;
+			overflow: auto;
+			float: left;
+			
+		}
+		#buybtn, #returnbtn, #cancelbtn{
+			margin-right: 20px;
+			float: right;
+		}
+
+		.thumbnail{
+		 	color: black;
+		 	font-size: 12pt;
+		 }
+		 img{
+		 	width: 120px;
+		 	height: 100px;
+		 }
+		 #wrap{
+			 width: 200px;
+		 } 
+		 #info{
+		 	font-size: 10pt;
+		 	width: 90%;
+		 	float: left;
+		 }
+		 .row{
+		 	margin: 10px;
+		 }
+		 

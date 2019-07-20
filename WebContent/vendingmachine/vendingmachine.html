@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="EUC-KR">
+	<title>Insert title here</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css_vending.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	totalmoney = 0;
+	money = 0;
+	swcount = 0;
+	brcount = 1;
+	sacount = 0;
+	$(document).ready(function(){
+		$("#inputbtn").on("click",function(){
+			inputmoney = parseInt(window.prompt("넣을 돈을 입력하세요")); 
+			money = money + inputmoney;
+			str = money + "원";
+			$("#coin").text(str);
+		});
+		$("#returnbtn").on("click",function(){
+			if(money!=0){
+				$("#outcoin").attr("src","../VMimages/coin.jpg");
+			}
+			money=0;
+			str = money + "원";
+			$("#coin").text(str);
+		
+			
+		});
+		$("#buybtn").on("click",function(){
+			if(money>=totalmoney){
+				if(totalmoney!=0){
+					money = money-totalmoney;
+					str = money + "원";
+					$("#coin").text(str);
+					$("#select").empty();
+					for(i=1; i<=swcount; i++){
+						$("#output").append("<img src='../VMimages/wrap.png' id='wrap'>");
+					} 
+					totalmoney=0;
+					swcount=0;
+				}else{
+					alert("메뉴를 선택해주세요");
+				}
+			}else{
+				alert("돈이 부족합니다");
+			}
+		});
+		$("#cancelbtn").on("click",function(){
+			totalmoney=0;
+			$("#select").text("");
+			swcount=0;
+		});
+		
+		$("#output").on("click",function(){
+			$("#output").empty();
+		});
+		$("#outcoin").on("click",function(){
+			$("#outcoin").attr("src","");
+		});
+		
+		
+		$("#sw1").on("click",function(){
+			brcount = 0;
+			srcount = 0;
+			swcount = swcount+1;
+			$("#select").append("<p>*샌드위치 : 베지 - 4000원</p>");
+			totalmoney = totalmoney+4000;
+			
+		});
+		$("#sw2").on("click",function(){
+			brcount = 0;
+			srcount = 0;
+			swcount = swcount+1;
+			$("#select").append("<p>*샌드위치 : 에그마요 - 4500원</p>");
+			totalmoney = totalmoney+4500;
+		});
+		$("#sw3").on("click",function(){
+			brcount = 0;
+			srcount = 0;
+			swcount = swcount+1;
+			$("#select").append("<p>*샌드위치 : 미트볼 - 4500원</p>");
+			totalmoney = totalmoney+4500;
+		});
+		$("#sw4").on("click",function(){
+			brcount = 0;
+			srcount = 0;
+			swcount = swcount+1;
+			$("#select").append("<p>*샌드위치 : 참치 - 4500원</p>");
+			totalmoney = totalmoney+4500;
+		});
+		$("#sw5").on("click",function(){
+			brcount = 0;
+			srcount = 0;
+			swcount = swcount+1;
+			$("#select").append("<p>*샌드위치 : 치킨데리야끼 - 5000원</p>");
+			totalmoney = totalmoney+5000;
+		});
+		$("#sw6").on("click",function(){
+			brcount = 0;
+			srcount = 0;
+			swcount = swcount+1;
+			$("#select").append("<p>*샌드위치 : 로스트치킨 - 5000원</p>");
+			totalmoney = totalmoney+5000;
+		});
+		$("#sw7").on("click",function(){
+			brcount = 0;
+			srcount = 0;
+			swcount = swcount+1;
+			$("#select").append("<p>*샌드위치 : 이탈리안비엠티 - 5000원</p>");
+			totalmoney = totalmoney+5000;
+		});
+		$("#sw8").on("click",function(){
+			brcount = 0;
+			srcount = 0;
+			swcount = swcount+1;
+			$("#select").append("<p>*샌드위치 : 터키베이컨 - 5000원</p>");
+			totalmoney = totalmoney+5000;
+		});
+		
+		$("#br1").on("click",function(){
+			if(swcount>=1){
+				if(brcount==0){
+					brcount=1;
+					$("#select").append("<p>빵 : 화이트</p>");
+				}else{
+					alert("샌드위치1개에 빵1개 선택가능합니다.");
+				}
+			}else{
+				alert("샌드위치를 선택해주세요");
+			}
+		});
+		$("#br2").on("click",function(){
+			if(swcount>=1){
+				if(brcount==0){
+					brcount=1;
+					$("#select").append("<p>빵 : 하티</p>");
+				}else{
+					alert("샌드위치1개에 빵1개 선택가능합니다.");
+				}
+			}else{
+				alert("샌드위치를 선택해주세요");
+			}
+		});
+		$("#br3").on("click",function(){
+			if(swcount>=1){
+				if(brcount==0){
+					brcount=1;
+					$("#select").append("<p>빵 : 위트</p>");
+				}else{
+					alert("샌드위치1개에 빵1개 선택가능합니다.");
+				}
+			}else{
+				alert("샌드위치를 선택해주세요");
+			}
+		});
+		$("#br4").on("click",function(){
+			if(swcount>=1){
+				if(brcount==0){
+					brcount=1;
+				$("#select").append("<p>빵 : 허니오트</p>");
+				}else{
+					alert("샌드위치1개에 빵1개 선택가능합니다.");
+				}
+			}else{
+				alert("샌드위치를 선택해주세요");
+			}
+				
+		});
+		
+		$("#sa1").on("click",function(){
+			if(swcount>=1){
+				sacount=sacount+1;
+				if(sacount>1){
+					totalmoney = totalmoney + 300;
+					$("#select").append("<p>소스 : 디종홀스래디쉬 - 300원</p>");
+				}else{
+					$("#select").append("<p>소스 : 디종홀스래디쉬</p>");
+				}
+			}else{
+				alert("샌드위치를 선택해주세요");
+			}
+		});
+		$("#sa2").on("click",function(){
+			if(swcount>=1){
+				sacount=sacount+1;
+				if(sacount>1){
+					totalmoney = totalmoney + 300;
+					$("#select").append("<p>소스 : 랜치드레싱 - 300원</p>");
+				}else{
+					$("#select").append("<p>소스 : 랜치드레싱 </p>");
+				}
+			}else{
+				alert("샌드위치를 선택해주세요");
+			}
+		});
+		$("#sa3").on("click",function(){
+			if(swcount>=1){
+				sacount=sacount+1;
+				if(sacount>1){
+					totalmoney = totalmoney + 300;
+					$("#select").append("<p>소스 : 스위트어니언 - 300원</p>");
+				}else{
+					$("#select").append("<p>소스 : 스위트어니언</p>");
+				}
+			}else{
+				alert("샌드위치를 선택해주세요");
+			}	
+		});
+		$("#sa4").on("click",function(){
+			if(swcount>=1){
+			sacount=sacount+1;
+				if(sacount>1){
+					totalmoney = totalmoney + 300;
+					$("#select").append("<p>소스 : 스위트칠리 - 300원</p>");
+				}else{
+					$("#select").append("<p>소스 : 스위트칠리</p>")
+				}
+			}else{
+				alert("샌드위치를 선택해주세요");
+			}
+		});
+		
+		$("button").on("click",function(){
+			$("#totalcoin").text(totalmoney+"원");
+		});
+	});
+	
+	</script>
+</head>
+<body>
+
+	<div class="container">
+		<h3>VENDING MANCHINE</h3>
+			<ul class="list-group">
+				<li class="list-group-item">SANDWICH</li> 
+    		</ul> 
+
+  		<div class="itemcontainer">
+  			<p>샌드위치</p>
+  			<div class="row">
+		  		<div class="col-sm-3">
+		   			<div class="thumbnail">
+		      		<img src="../VMimages/Sandwich1.PNG">
+		       		<p>4000원</p>
+		      		<button class="btn" id="sw1">선택</button>
+		     		</div>
+		  		</div>
+		 		<div class="col-sm-3">
+		    		<div class="thumbnail">
+		      		<img src="../VMimages/Sandwich2.PNG">
+		      		<p>4500원</p>
+		      		<button class="btn" id="sw2">선택</button>
+		    		</div>
+		   		</div>
+		  		<div class="col-sm-3">
+		    		<div class="thumbnail">
+		      		<img src="../VMimages/Sandwich3.PNG">
+		      		<p>4500원</p>
+		      		<button class="btn" id="sw3">선택</button>
+		    		</div>
+		  		</div>
+		  		<div class="col-sm-3">
+		   			<div class="thumbnail">
+		      		<img src="../VMimages/Sandwich4.PNG">
+		       		<p>4500원</p>
+		      		<button class="btn" id="sw4">선택</button>
+		     		</div>
+		  		</div>
+			</div>
+			<div class="row">
+		 		<div class="col-sm-3">
+		    		<div class="thumbnail">
+		      		<img src="../VMimages/Sandwich5.PNG">
+		      		<p>5000원</p>
+		      		<button class="btn" id="sw5">선택</button>
+		    		</div>
+		   		</div>
+		  		<div class="col-sm-3">
+		    		<div class="thumbnail">
+		      		<img src="../VMimages/Sandwich6.PNG">
+		      		<p>5000원</p>
+		      		<button class="btn" id="sw6">선택</button>
+		    		</div>
+		  		</div>
+		  		<div class="col-sm-3">
+		   			<div class="thumbnail">
+		      		<img src="../VMimages/Sandwich7.PNG">
+		       		<p>5000원</p>
+		      		<button class="btn" id="sw7">선택</button>
+		     		</div>
+		  		</div>
+		 		<div class="col-sm-3">
+		    		<div class="thumbnail">
+		      		<img src="../VMimages/Sandwich8.PNG">
+		      		<p>5000원</p>
+		      		<button class="btn" id="sw8">선택</button>
+		    		</div>
+		   		</div>
+			</div>
+			<hr/>
+			<p>빵</p>
+  			<div class="row">
+		  		<div class="col-sm-3">
+		   			<div class="thumbnail">
+		      		<img src="../VMimages/bread1.PNG">
+		      		<button class="btn" id="br1">선택</button>
+		     		</div>
+		  		</div>
+		 		<div class="col-sm-3">
+		    		<div class="thumbnail">
+		      		<img src="../VMimages/bread2.PNG">
+		      		<button class="btn" id="br2">선택</button>
+		    		</div>
+		   		</div>
+		  		<div class="col-sm-3">
+		    		<div class="thumbnail">
+		      		<img src="../VMimages/bread3.PNG">
+		      		<button class="btn" id="br3">선택</button>
+		    		</div>
+		  		</div>
+		  		<div class="col-sm-3">
+		   			<div class="thumbnail">
+		      		<img src="../VMimages/bread4.PNG">
+		      		<button class="btn" id="br4">선택</button>
+		     		</div>
+		  		</div>
+			</div>
+			
+			<hr/>
+			<p>소스</p>
+  			<div class="row">
+		  		<div class="col-sm-3">
+		   			<div class="thumbnail">
+		      		<img src="../VMimages/sauce1.PNG">
+		      		<button class="btn" id="sa1">선택</button>
+		     		</div>
+		  		</div>
+		 		<div class="col-sm-3">
+		    		<div class="thumbnail">
+		      		<img src="../VMimages/sauce2.PNG">
+		      		<button class="btn" id="sa2">선택</button>
+		    		</div>
+		   		</div>
+		  		<div class="col-sm-3">
+		    		<div class="thumbnail">
+		      		<img src="../VMimages/sauce3.PNG">
+		      		<button class="btn" id="sa3">선택</button>
+		    		</div>
+		  		</div>
+		  		<div class="col-sm-3">
+		   			<div class="thumbnail">
+		      		<img src="../VMimages/sauce4.PNG">
+		      		<button class="btn" id="sa4">선택</button>
+		     		</div>
+		  		</div>
+			</div>
+		</div>
+		
+		<div class="calccontainer">
+			<div id="coin">
+				<p>0원</p>
+			</div>
+			
+			<button type="button" id="inputbtn">
+  				<span class="glyphicon glyphicon-minus-sign"></span>
+			</button>
+			
+			<div id="select"></div>
+			<div id="totalcoin">
+				<p>0원</p>
+			</div>
+			
+			<button type="button" id="cancelbtn">
+  				<span class="glyphicon glyphicon-remove"></span>취소
+			</button>
+			<button type="button" id="returnbtn">
+				<span class="glyphicon glyphicon-collapse-down"></span>반환
+			</button>
+			<button type="button" id="buybtn">
+  				<span class="glyphicon glyphicon-credit-card"></span>구매
+			</button>
+			
+		
+			
+			<div id="output"></div>
+			<div id="coinoutput">
+				<img src="" id="outcoin">
+			</div>	
+			
+			<div id="info">
+				<p>1.빵과 소스를 선택하지 않으면 기본으로 나옵니다.</p>
+				<p>2.샌드위치,빵,소스 순서대로 선택해주세요.</p>
+				<p>3.소스는 여러번 추가할 수 있으며 2번부터 300원씩 추가됩니다.</p>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>
