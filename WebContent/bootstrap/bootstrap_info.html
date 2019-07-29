@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Bootstrap Theme The Band</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+	.container{
+		background: #2d2d30;
+ 		color: #bdbdbd;
+ 		margin-bottom: 20px;
+	}
+	/* Add a dark gray background color to the modal header and center text */
+	 .btn{
+	    background-color: #333;
+	    color: #fff !important;
+	    text-align: center;
+	    font-size: 15px;
+	}
+	/* Remove rounded borders from list */
+	.row{
+		margin: 20px;
+	}
+
+</style>
+</head>
+<body>
+
+	<div class="container text-center">
+	  <h3>서울 전시회</h3>
+	  <p><em>We love art!</em></p>
+	</div> 
+	<div>
+		<button class="btn" type="button" id="Info" left="300px">상세정보</button>
+	</div>
+	<div class="row text-center">
+	  <div class="col-sm-3">
+	    <div class="thumbnail">
+	      <img src="../infoImg/info1.PNG">
+	       <p><strong>모네 빛을 그리다 : 두번째이야기</strong></p>
+	       <p>본다빈치뮤지엄</p>
+	       <p>2017.07.07~2018.09.02</p>
+	      <button class="btn" data-toggle="modal" data-target="#myModal" >예매하기</button>
+	     </div>
+	  </div>
+	  <div class="col-sm-3">
+	    <div class="thumbnail">
+	      <img src="../infoImg/info2.PNG">
+	      <p><strong>세.젤.예 전 시즌2</strong></p>
+	      <p>장소: 강남미술관</p>
+	      <p>일시: 2018.06.29~2018.08.26</p>
+	      <button class="btn" data-toggle="modal" data-target="#myModal">예매하기</button>
+	    </div>
+	   </div>
+	  <div class="col-sm-3">
+	    <div class="thumbnail">
+	      <img src="../infoImg/info3.PNG">
+	      <p><strong>전통주갤러리</strong></p>
+	      <p>장소: 전통주갤러리</p>
+	      <p>일시: 2018.02.01~오픈런</p>
+	      <button class="btn" data-toggle="modal" data-target="#myModal">예매하기</button>
+	    </div>
+	  </div>
+	  <div class="col-sm-3">
+	    <div class="thumbnail">
+	      <img src="../infoImg/info4.PNG" >
+	      <p><strong>그레뱅뮤지엄</strong></p>
+	      <p>장소: 그레뱅뮤지엄</p>
+	      <p>일시: 2015.07.3~오픈런</p>
+	      <button class="btn" data-toggle="modal" data-target="#myModal">예매하기</button>
+	    </div>
+	  </div>
+	</div> 
+	
+	<div class="row text-center">
+	  <div class="col-sm-3">
+	    <div class="thumbnail">
+	      <img src="../infoImg/info5.PNG">
+	       <p><strong>마르크 샤갈 특별전 - 영혼의 정원</strong></p>
+	       <p>장소: M컨템포러리</p>
+	       <p>일시: 2018.04.28~2018.09.02</p>
+	      <button class="btn" data-toggle="modal" data-target="#myModal">예매하기</button>
+	     </div>
+	  </div>
+	  <div class="col-sm-3">
+	    <div class="thumbnail">
+	      <img src="../infoImg/info6.PNG">
+	      <p><strong>아드만 애니메이션 - 웰레스&그로밋과 친구들</strong></p>
+	      <p>장소: 동대문디자인플라자</p>
+	      <p>일시: 2018.04.13~2018.07.12</p>
+	      <button class="btn" data-toggle="modal" data-target="#myModal">예매하기</button>
+	    </div>
+	   </div>
+	  <div class="col-sm-3">
+	    <div class="thumbnail">
+	      <img src="../infoImg/info7.PNG" >
+	      <p><strong>아이러브레고</strong></p>
+	      <p>장소: 롯데백화점김포공항점</p>
+	      <p>일시: 2018.07.20~오픈런</p>
+	      <button class="btn" data-toggle="modal" data-target="#myModal">예매하기</button>
+	    </div>
+	  </div>
+	  <div class="col-sm-3">
+	    <div class="thumbnail">
+	      <img src="../infoImg/info8.PNG">
+	      <p><strong>반고흐&폴고갱 라이브전</strong></p>
+	      <p>장소: 상상공간뮤지엄</p>
+	      <p>일시: 2018.06.30~오픈런</p>
+	      <button class="btn" data-toggle="modal" data-target="#myModal">예매하기</button>
+	    </div>
+	  </div>
+	</div> 
+	
+	
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" role="dialog">
+	  <div class="modal-dialog">
+	
+	    <!-- Modal content-->
+	     <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4><span class="glyphicon glyphicon-lock"></span>예매</h4>
+	      </div>
+	      <div class="modal-body">
+	        <form role="form">
+	          <div class="form-group">
+	            <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span>예매, 1인 기준: 10000원</label>
+	            <input type="number" class="form-control" id="psw" placeholder="인원수">
+	          </div>
+	          <div class="form-group">
+	             <label for="usrname"><span class="glyphicon glyphicon-user"></span>Email</label>
+	            <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+	          </div>
+	          <button type="submit" class="btn btn-block" id="btnPay">Pay 
+	            <span class="glyphicon glyphicon-ok"></span>
+	          </button>
+	        </form>
+	      </div>
+	       <div class="modal-footer">
+	        <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+	          <span class="glyphicon glyphicon-remove"></span> Cancel
+	        </button>
+	      </div>
+	    </div>
+	  </div>
+	</div> 
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#Info").on("click",function(){
+				//alert("test");
+				location.href="http://localhost:8088/clientweb/bootstrap/bootstrapNext.html";
+			});
+		});
+	</script>
+	
+</body>
+</html> 
