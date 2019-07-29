@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		function insertP(){
+			var pNode = document.createElement("p");
+			pNode.setAttribute("style", "background: yellow");
+			var textNode = document.createTextNode("newP");
+			parentNode = document.getElementById("root");
+			pNode.appendChild(textNode);
+			parentNode.appendChild(pNode);
+		}
+		function deleteP(){
+			parentNode = document.getElementById("root");
+			if(parentNode.lastChild.nodeName=="#text"){	//공백노드 삭제 시켜주기 위함. 공백일때 nodeName이 #text임
+				parentNode.removeChild(parentNode.lastChild);	
+			}
+			parentNode.removeChild(parentNode.lastChild);
+		}
+		function deleteDivAndP(){	
+			parentNode = document.getElementById("root");
+			nodelist = parentNode.childNodes;
+			size = nodelist.length;
+			for(i = 0; i < size; i++){
+				//alert(nodelist.length);
+				//alert(size);
+				parentNode.removeChild(parentNode.lastChild);
+			}
+			/* while(parentNode.hasChildNodes()){	// parentNode의 ChildNodes가 존재하는 동안 반복
+				parentNode.removeChild(parentNode.lastChild);
+			} */
+		}
+		/* function insertP() {
+			//alert("insetP");
+			
+			newTextNode = document.createTextNode("newP");
+			newPNode = document.createElement("p");
+			newPNode.setAttribute("style", "background: yellow");
+			newPNode.appendChild(newTextNode);
+	
+			parentNode2 = document.getElementById("root");
+			parentNode2.appendChild(newPNode);
+		}
+		function deleteP(){
+			parentNode = document.getElementById("root");
+			delNode = parentNode.lastChild;	
+			parentNode.removeChild(delNode);
+		}
+		function deleteDivAndP(){
+			parentNode = document.getElementById("root");
+			
+			//while(parentNode.childNodes.length!=0){
+			//	parentNode.removeChild(parentNode.lastChild);
+			//}  
+			
+			
+			//과제 while문 for문으로 바꿔서 해보기
+			count = parentNode.childNodes.length;
+			for(i=0;i<count;i++){
+				parentNode.removeChild(parentNode.firstChild);
+			}
+		}
+		function innerHTML_test() {
+			
+		} */
+		
+	</script>
+	
+</head>
+<body>
+	<div id="layer"></div>
+
+	<hr>
+
+	<div id="root">
+		<p style="background: gray;">line01</p>
+		<p style="background: skyblue">line02</p>
+		<p style="background: green;">line03</p>
+		<p style="background: red;">line04</p>
+	</div>
+
+	<hr>
+	<button onclick="insertP()">P태그추가하기</button>
+	<button onclick="deleteP()">P태그삭제하기</button>
+	<button onclick="deleteDivAndP()">div안의 모든 p태그 삭제하기</button>
+	<button onclick="innerHTML_test()">innerHTML</button>
+
+
+</body>
+</html>
